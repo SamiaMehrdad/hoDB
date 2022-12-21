@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const HF = require('../../share/hfixes');
 
 const CardSchema = mongoose.Schema(
   {
@@ -8,69 +9,82 @@ const CardSchema = mongoose.Schema(
 
 const userSchema = mongoose.Schema(
   {
-//....................... first name   
-    name: {
-      type: String,
-      required: [true, 'Name can not be empty.'],
-    },
-//....................... family name  
-    family: {
-      type: String,
-      required: [true, 'Please add a name'],
-    },
-//....................... nickname should be assign to name as default in runtime
+    type: { type: String, required: true, enum: Object.values(HF.Enum.UserType) },
+//first name   
+
+    name: { type: String, required: [true, 'Name can not be empty.'], },
+//last name  
+    family: { type: String, required: [true, 'Please add a name'], },
+//nickname is assign to name as default 
     nickname: {
       type: String,
-      
+      default: function () { 
+                              return this.name + Math.random()*1000; 
+                            } //TODO Check it
     },
-//....................... title as Dr, Mr, Ms, Mrs, Jr, 
-    title: {
-      type: String,
-    },
-//.......................
+//? title as Dr, Mr, Ms, Mrs, Jr, Is it necessary?!
+//?    title: { type: String, },
+//email address is mandatory
     email: {
       type: String,
       required: [true, 'Please add an email'],
       unique: true,
       match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/],
     },
-//.......................
-    emailValidation: {
-
-      verified: {
-        type: Boolean,
-        default: false, 
-      },
-      dateOfRegister: { 
-        type: Date,
-        default: Date.now,
-      },
-      dateOfVerify: {
-        type: Date,
-      },
-
+//email should be validated
+    emailValidation: { //TODO Think about design.
+      isVerified: { type: Boolean, default: false, },
+      dateOfRegister: { type: Date, default: Date.now, },
+      dateOfVerify: { type: Date, },
+      verificationCode: { type: String, },
+      verificationSentMoment:{ type: Date, },
+      isReminderSent: { type: Boolean, default: false, },
     },
-//......................
+//TODO Change this
+    language: [{    // array of 
+      type: Number, // select from a predefined list  
+    }],
+    //TODO Change this
+    gender: Number, // 0: Unknown, 1:M,  2:F, 3:NB    
+//Age related fields
+    age:{
+      dob: { type: Date, },
+      isVerified: { type: Boolean, default: false, },
+    }, 
+//Engagement motivator and reminder fields
+  reminder: {
+    isSent: { type: Boolean, default: false, },
+    isNeeded: { type: Boolean, default: false, },
+  },   
+//The last login moment
+    lastLogin: { type: Date, },
+//Optional recovery email
     recoveryEmail: {
         type: String,
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/],
     },
-
-    password: {
-      type: String,
-      required: [true, 'Please add a password'],
-      minlength: 6,
-    },
-
+//login password, should be stored as coded string
+    password: { type: String, required: true, minlength: 6, },
+//URL to avatar image
     avatar: {
 
     },
-
-    role: {
-      type: Number,
+//...................... 
+    role: {     // select from a predefined list  
+      type: Number, // enum
       required: true,
     },
-
+//...................... 
+    stars: { //TODO Think about design.
+      asMaker: Number,
+      asPublisher: Number,
+    },
+    wallet:{ //TODO Think about design.
+      normalStones: {type: Number, },  // normal stones are cashable to real money
+      lockedStones: {type: Number, },  // locked stones are welcomes and rewards, not cashable to real money
+      cash: {type: Number, },          // amount of real money
+      currency: {type: Number, default: 1, },      // enum
+    },
   },
   //-----------------------
   {
@@ -78,4 +92,4 @@ const userSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('Users', userSchema);
+module.exports = mongoose.model('User', userSchema);

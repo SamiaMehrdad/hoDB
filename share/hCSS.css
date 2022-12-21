@@ -1,0 +1,162 @@
+/*
+Class prefixes:
+    a:  align
+    b:  border
+    bt: button
+    bk: background
+    c:  color
+    f:  font
+    p:  padding
+    m:  margin
+    h:  hover
+    t:  text
+    z:  z-index
+*/
+@import url('./Roboto/Roboto-Regular.ttf');
+body{
+    /* colors */
+    --gl: #eee; /* gray light */
+    --gm: #999; /* gray medium */
+    --gd: #666; /* gray dark */
+    --bl: #333; /* black light */
+    --bd: #222; /* black dark */
+    --w:  #fff; 
+    --gr: #4C8E7D;
+    --rd: #A35058;
+    --bl: #5A5AB0;
+    /* default properties */
+    background-color: var(--gd);
+    color: var(--gm);
+    user-select: none;
+    font-family: 'Roboto', arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: all .3s; /* check performance */
+}
+/* ------------- basic micro classes --------------- */
+/*
+.a-l{ /* align left *
+}
+.a-r{ /* align right *
+}
+.a-c{ /* align center *
+}
+*/
+/* ---- Bordering ---- */
+/* border width */
+.b-w1{
+    border-width: 1px;
+}
+/* border color */
+.b-crd{
+    border-color: var(--rd);
+}
+/* border position */
+.b-pb{ /* position: bottom */
+    border-bottom: var(--gm) solid 1px;
+}
+.b-pu{ /* position: top */
+    border-top: var(--gm) solid 1px;
+}
+.b-pl{ /* position: left */
+    border-left: var(--gm) solid 1px;
+}
+.b-pr{ /* position: right */
+    border-right: var(--gm) solid 1px;
+}
+.b-all{ /* full border */
+    border: var(--gm) solid 1px;
+}
+/* ---- Backgrounding ---- */
+.bk-g3{
+    background-color: var(--gd);
+}
+.bk-rd{ /* red background */
+    background-color: var(--rd);
+}
+.bk-gr{ /* green background */
+    background-color: var(--gr);
+}
+.bk-bl{ /* blue background */
+    background-color: var(--bl);
+}
+/* ---- Coloring ---- */
+.c-rd{ /* red color */
+    color: var(--rd);
+}
+.c-gr{ /* green color */
+    color: var(--gr);
+}
+.c-wt{ /* white color */
+    color: var(--w);
+}
+
+/* ---- Texting ---- */
+.t-sb
+{ /* menu title, small bold */
+ font-size: 10px ;
+ font-style: bold;
+}
+.t-s
+{ /* menu item, small */
+ font-size: 10px;
+}
+.t-m
+{ /* normal text, medium size */
+ font-size: 12px;
+}
+.t-mb
+{ /* button text, medium bold */
+ font-size: 12px ;
+ font-style: bold;
+}
+.t--
+{ /* strike out text - Complementary */
+ text-decoration: line-through;
+}
+/* ---- z-indexing ---- */
+.z0{
+    z-index: 0;
+}
+.z1{
+    z-index: 10;
+}
+.z2{
+    z-index: 20;
+}
+.z3{
+    z-index: 30;
+}
+.zmax{
+    z-index: 60000;
+}
+
+
+/* ------------- mid level classes --------------- */
+
+.rnd{
+    border-radius: 9999px;
+}
+/* --- hover class. Alone usage ok --- */
+.hov
+{
+ cursor: pointer;
+ filter: drop-shadow(2px 2px 1px rgba(0,0,0,.5));
+ color: var(--w); 
+}
+
+.menu{
+    background-color: var(--gd);
+    color: var(--gm);
+    float:left; /*check*/
+    position:relative; /*check*/
+    padding: 5px 10px;
+    z-index: 1000;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0,.5));  
+}
+/* .hmitem is empty, but should be assigned to use its hover */
+.mitem:hover{
+    color: var(--w); 
+}
