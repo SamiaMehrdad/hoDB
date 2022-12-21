@@ -20,6 +20,7 @@ const Category = require('./hCategory')
         adverseList: [{ type: Number }],  //----  list of all items which never can be in the same screen with this.
         alliesList: [{ type: Number }],   //----  list of all related items, for multi choice scenarios.
         narration: { type: String },      //----  URL to audio that will be played with this item.  
+        hint: { type: String },           //---- 
       },
       {
         timestamps: true,

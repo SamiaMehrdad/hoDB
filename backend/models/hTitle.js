@@ -46,6 +46,7 @@ const titleSchema = mongoose.Schema(
    sysIsPortable: {type: Boolean, default: false}, //--- Check/Set this value says URLs are actual values or Addresses
         //----  Array of Items of this title
    items: [{type: mongID, ref:'Item'},], //check it
+   hintPrice: {type: Number,},        //---- Player should pay this to get a hint on any item 
   },
   {
     timestamps: true,
