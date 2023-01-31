@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+hoduno common css file, inspired by and work alongside Tailwind css 
+created Dec 15, 2022 Mehrdad Samia
+* Rules
+- Brand colors are defined in tailwind.config.js
+- In React or html, assign color by assigning related class from tailwind.
+
+* Class prefixes:
+    a:  align
+    b:  border
+    bt: button
+    bk: background
+    c:  color
+    f:  font
+    h:  height
+    mn: menu
+    p:  padding
+    s:  space ( margin )
+    t:  text
+    w:  Width
+    x:  X position
+    y:  Y position
+    z:  z-index
+
+* Known usage:
+    menu title text: .t-sb  
+    menu item text: .t-s
+    normal text: .t-m and .t-mb 
+    asign .mnu to menu div, and .mni to menu line
+*/
+
+
+
+@font-face 
+{ 
+font-family: "Roboto";  
+src: url("./Roboto/Roboto-Regular.ttf")format("ttf"); 
+}
+@font-face 
+{ 
+font-family: "hIcon";  
+src: url("./Roboto/icomoon.woff")format("woff"); 
+}
+
+body{
+    /** all default color vars should be 0 and get value by js in runtime, setCSS(cVar, newVal), based on color theme. */
+    @apply text-light bg-dark;
+    user-select: none;
+    font-family: 'Roboto'; /*, 'Ubuntu', arial, sans-serif;*/
+    margin: 0;
+    padding: 0;
+    transition: all .5s; /* check performance */
+}
+
+textarea {
+    resize: none;
+  }
+
+/* ----------------- scroll bar -------------------- */
+/* .scrl{
+    overflow-y: auto;
+    /* these two lines are just for firefox 
+    scrollbar-color: var(--h1) transparent;
+    scrollbar-width: 10px;
+  } */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+::-webkit-scrollbar-thumb {
+    @apply bg-darkGray;
+    border-radius: 7px;
+    cursor: pointer; 
+  }
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-lightGray;
+  }
+/* ------------- basic micro classes --------------- */
+/* ---- Aligning ---- */
+.a-l{
+    text-align: left;
+    justify-items: left;
+    justify-content: left;
+}
+.a-c{
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}
+.a-r{
+    text-align: right;
+    justify-items: right;
+    justify-content: right;    
+}
+
+/* ---- Texting ---- */
+/* Using Tailwind text sizes */
+.t-s { /* small */
+    @apply text-xs
+}
+.t-m{ /* medium */
+    @apply text-sm
+}
+.t-l{ /* large */
+    @apply text-base
+}
+.t-xl{ /* extra large */
+    @apply text-xl
+}
+
+/*--- text complementary ---*/
+
+.tb{ /* bold */
+ font-weight: bold;
+   }
+.ti{ /* italic */
+ font-style: italic;  
+}
+.t--{ /* strike out*/
+ text-decoration: line-through;
+}
+.t_{ /* underline */
+ text-decoration: underline;
+}
+   
+/* ---- positioning ---- */
+.x0{
+    left: 0;
+}
+.y0{
+    top: 0;
+}
+.xy0{
+    left:0;
+    top: 0;
+}
+/* ---- z-indexing ---- */
+.z0{
+    z-index: 0;
+}
+.z1{
+    z-index: 10;
+}
+.z2{
+    z-index: 20;
+}
+.z3{
+    z-index: 30;
+}
+.zmax{
+    z-index: 60000;
+}
+/* ------------- mid level classes --------------- */
+
+
+/* --- hover class. Alone usage ok --- */
+.hov:hover
+{
+ cursor: pointer;
+ filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+ @apply text-bright;
+}
+
+/*---- ICONS ----*/
+.icon{
+    font-family: "hIcon";
+}
+
+
+

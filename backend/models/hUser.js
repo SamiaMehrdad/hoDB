@@ -40,8 +40,9 @@ const userSchema = mongoose.Schema(
       verificationSentMoment:{ type: Date, },
       isReminderSent: { type: Boolean, default: false, },
     },
+    uiLang: Number, // comming from languages enum
 //TODO Change this
-    language: [{    // array of 
+    language: [{    // array of all languages user have
       type: Number, // select from a predefined list  
     }],
     //TODO Change this

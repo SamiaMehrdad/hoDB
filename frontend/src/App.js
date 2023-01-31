@@ -1,21 +1,36 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+/*
+* IDEA:
+* dispact obj defines relation between icons, buttons etc and related menu to show
+ const dispatch = {
+       clickElemID: MenuToOpenID;
+ }
+*  
 
-import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
-import Register from './pages/Register';
+*/
+import {ST, Tmenu, TDiv, ICard, TButton, TInput, TSelect, TTextArea} from './share/index.js';
+
+import PMakers from './pages/makers.jsx';
+
 
 function App() {
+
+  document.addEventListener('click', (e) => { 
+       
+    //   if( ST.activeElem === true )
+             // {
+                     ST.menuHide = true; 
+                     ST.activeElem = null;
+                     console.log('CLICKED and HIDE!');
+            //  }
+});
+ ST.menuHide = false;
+
+
+
+
   return (
     <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Dashboard />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
-      </Router>
+<PMakers id='test'/>
     </>
   );
 }
