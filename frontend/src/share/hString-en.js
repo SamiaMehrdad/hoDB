@@ -36,7 +36,7 @@ const hString = {
                 mn3:
                 {
                     title: 'Sort by',
-                    order: ['Order','','&#xnnnn'],
+ 
                     value: ['Value','','&#xnnnn'],
                     relateion: ['Relation','','&#xnnnn'],
                 },
