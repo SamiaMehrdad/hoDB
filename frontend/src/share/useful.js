@@ -24,7 +24,29 @@ limit: function (str, n) {
     return str.length > n ? str.substr(0, n-1) + '...' : str;
 },
 
-
+/*
+* function to add n of ' ' solid spaces to given string in appearance of !n
+* example: "hello !3dear" => "hello   dear"
+* example: "hello !3 dear !2 friend" => "hello     dear    friend"
+*example: "equal to !n" => "equal to !n"
+*/
+//?  test: passed  2023-02-15 
+holeString: function(str) {
+        const regex = /!(\d+)/g;
+        let i = 0;
+        let result = '';
+        let match;
+      
+        while ((match = regex.exec(str)) !== null) {
+          result += str.slice(i, match.index) + ' '.repeat(match[1]);
+          i = match.index + match[0].length;
+        }
+        return result + str.slice(i);
+      }
+ 
+  
+  
+  
 
 /*
     * function to make a menu from an array of items
