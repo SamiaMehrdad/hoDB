@@ -57,7 +57,14 @@ body{
     font-family: 'Roboto' , 'Ubuntu', arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: all .5s; /* check performance */
+    /*transition: all 0.5s; */ /* check performance */
+    
+  /* @apply bg-darkGray;*/
+    background-image: radial-gradient(50% 50% at 10% 10%, #445566, transparent), radial-gradient(50% 50% at 100% 50%, #443388, transparent) , radial-gradient(40% 40% at 50% 70%, #006666, transparent), radial-gradient(70% 70% at  10% 90%, #665050, transparent);
+    background-attachment: fixed;
+    }
+* .button{
+outline-color: transparent;
 }
 
 textarea {
@@ -88,16 +95,19 @@ textarea {
     text-align: left;
     justify-items: left;
     justify-content: left;
+    align-items: left;
 }
 .a-c{
     text-align: center;
     justify-items: center;
     justify-content: center;
+    align-items: center;
 }
 .a-r{
     text-align: right;
     justify-items: right;
-    justify-content: right;    
+    justify-content: right;  
+    align-items: right;  
 }
 
 /* ---- Texting ---- */
@@ -164,7 +174,7 @@ textarea {
 .hov:hover
 {
  cursor: pointer;
- filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+ filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
  @apply text-bright;
 }
 
@@ -206,5 +216,34 @@ textarea {
     @apply icon;
     margin: 0 0 10px 0;
     }
+
+
+.glassButton{
+@apply text-xl;
+    background-color: rgba(50,100,100,0.5);
+    @apply text-light;
+    margin: 30px 60px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 9999px;
+    transition: border .1s;
+
+}
+
+.glassButton:hover{
+    cursor: pointer;
+    border-left: 2px solid #0ff;
+    border-right: 2px solid #0ff;
+    color: #0ff;
+}
+.glassButton:active{
+
+border: none;
+    border-left: 2px solid #9c7;
+    border-right: 2px solid #9c7;
+    color: #9c7;
+
+}
+
 
 

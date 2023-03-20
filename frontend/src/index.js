@@ -6,7 +6,7 @@ import './css/hCSS.css';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement); 
-
+// rootElement.style.backgroundImage = 'url(sph.jpg)';
 root.render(
   <StrictMode>
     <App  />

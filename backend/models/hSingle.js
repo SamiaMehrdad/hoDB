@@ -1,4 +1,4 @@
-const HF = require('../../share/hfixes')
+const HF = require("../../frontend/src/share/hfixes")
 const User = require('./hUser')
 const Category = require('./hCategory')
 
@@ -9,6 +9,7 @@ const singleSchema = mongoose.Schema(
       isQuestion: { type: Boolean, }, //----  true/false : This is question/answer.
       caption: { type: String, },     //----  can be used instead of image, can be blank.
       image: { type: String },        //----  URL to image. can be large in width to implant multi imaging
+      audio: { type: String },        //----  URL to audio that will be played with this Single.
     },
     {
       timestamps: true,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import {TDiv, ICard, TopBar, Btn, InputRadio, Radio, Input, InfoBar} from '../share/componentStore';
+import {TDiv, ICard, TopBar, InputRadio, Radio, InfoBar, Btn, DivLine, Input, } from '../share/hComponents';
 import modelOfMakers from '../share/modelOfMakers';
-import { DynaMenu } from '../share/dynaMenu';
+import { DynaMenu } from '../components/dynaMenu';
 
 // TODO: make all components from txt file and arrange them.
 function PMakers( props ) {

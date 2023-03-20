@@ -7,10 +7,10 @@
 *  
 
 */
-import {ST, Tmenu, TDiv, ICard, TButton, TInput, TSelect, TTextArea} from './share/componentStore.js';
-
+import {Tmenu, TDiv, ICard, TButton, TInput, TSelect, TTextArea} from './share/hComponents.js';
+import ST from './share/state.js';
 import PMakers from './pages/makers.jsx';
-
+import Home from './pages/home.jsx';
 
 function App() {
 
@@ -40,7 +40,8 @@ function App() {
 
   return (
     <>
-<PMakers id='test' />
+{/* <PMakers id='test' /> */}
+<Home />
     </>
   );
 }

@@ -8,10 +8,10 @@
 //* include select: false to fields like password to prevent returning in queries
 
 const mongoose = require('mongoose')
-const HF = require('../../share/hfixes')
+const HF = require("../../frontend/src/share/hfixes")
 const User = require('./hUser')
 const Category = require('./hCategory')
-
+const mongID = mongoose.Schema.Types.ObjectId;
 
 
 const titleSchema = mongoose.Schema(

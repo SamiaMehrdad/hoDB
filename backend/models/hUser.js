@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const HF = require('../../share/hfixes');
+//const HF = require('../../share/hfixes');
+const HF = require("../../frontend/src/share/hfixes")
+
 
 const CardSchema = mongoose.Schema(
   {

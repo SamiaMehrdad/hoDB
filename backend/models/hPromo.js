@@ -8,6 +8,7 @@
 const mongoose = require('mongoose');
 const Title = require('./hTitle');
 const HF = require('../../share/hfixes');
+const mongID = mongoose.Schema.Types.ObjectId;
 
 const promoSchema = mongoose.Schema({
     publish: { type: mongID, ref: 'Publish', },

@@ -7,7 +7,8 @@
 
 const mongoose = require('mongoose');
 const Title = require('./hTitle');
-const HF = require('../../share/hfixes');
+const HF = require("../../frontend/src/share/hfixes")
+const mongID = mongoose.Schema.Types.ObjectId;
 
 const publishSchema = mongoose.Schema(
     {
@@ -17,13 +18,14 @@ const publishSchema = mongoose.Schema(
         //TODO replace design for country
         targetCountry: [String],        //---- Where this run is available + Taxing or other purpose
         comment: String,
-        item: [Title],                  //---- single title, or multiple as bundle
+        package: [{type: mongID, ref:'Title'}],                  //---- single title, or multiple as bundle
         count: Number,                  //---- how many of this Title(s) is in this Publish
         imgCover: { type: String, },    //---- URL to cover image. This can override title.imgCover
         imgThumb: { type: String, },    //---- URL to thumbnail cover image. This can overridde title.imgThumb
         baseID: String,
         price: Number,
-        date: { type: Date, default: Date.now, },
+        run: Number,                    //---- How many times this title has been published
+        date: { type: Date, default: () => Date.now() },
         schedule: Date,                 //---- Scheduled launch date 
         publisher: String,              //TODO replace it with publisher object
     },

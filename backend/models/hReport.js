@@ -6,7 +6,7 @@
 // 
 
 const mongoose = require('mongoose');
-const HF = require('../../share/hfixes');
+const HF = require("../../frontend/src/share/hfixes")
 
 const ReportSchema = mongoose.Schema(
     {
