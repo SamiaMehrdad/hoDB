@@ -1,3 +1,9 @@
+// hoduno Login page
+// export default Login;
+// called by: home page
+// 2023 Mehrdad Samia -  All Rights Reserved
+// --------------------------------------------------//
+
 function Login() {
 
   const loginbyUP = () => {
@@ -41,11 +47,11 @@ function Login() {
       </div>
       <div className=" w-full h-1/5 pt-[18px]">
           <span className="icon "> </span><span className="text-2xl ml-[5%]">Continue with ...</span>
-          <div className="text-[42px] pt-12 pl-16 flex w-full">
-            <span onClick={loginbyGoogle} className="icon hov mr-4 "></span>
-            <span onClick={loginbyFB} className="icon hov mx-4"></span>
-            <span onClick={loginbyTweeter} className="icon hov mx-4 "></span>
-            <span onClick={loginbyLinkedin} className="icon hov mx-4 "></span>
+          <div className="text-[42px] pt-12 pl-[8%] flex w-full">
+            <span onClick={loginbyGoogle} className="icon hov mr-[6%] "></span>
+            <span onClick={loginbyFB} className="icon hov mr-[6%]"></span>
+            <span onClick={loginbyTweeter} className="icon hov mr-[6%] "></span>
+            <span onClick={loginbyLinkedin} className="icon hov mr-[6%] "></span>
           </div>
       </div>
     </div>

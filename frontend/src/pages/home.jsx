@@ -1,3 +1,8 @@
+// hoduno main page of the website
+// component: Home
+// called by: App (only)
+// 2023 Mehrdad Samia -  All Rights Reserved
+// --------------------------------------------------//
 // background gradient is defined in hCSS.css file
 
 import {React, useState } from 'react';
@@ -18,12 +23,12 @@ function Home() {
     {/* Making top-right round menu container */}
     <HomeMenu show={showMenu} items={modelOfHomepage.menu}/>
     {/* <Modal show={showModal} className="w-[42%]  h-[500px] p-0 rounded-2xl text-[40px] bg-dark" onCloseClick={()=>setShowModal(false)}> */}
-    {/* <Modal show={ST.modalShow} className="w-[42%]  h-[500px] p-0 rounded-2xl text-[40px] bg-dark" >
+    {/* <Modal show={ST.modalShow} className="md:w-[42%] w-full md:h-[500px]  h-full p-0 rounded-2xl text-[40px] bg-dark" >
 <Login/>
       </Modal> */}
     <div className="fixed z-20 top-0 right-0 w-[180px] h-[180px]  bg-brandB rounded-bl-full opacity-90"> 
       <div className=" text-[32px] ml-[5px] icon w-[175px] h-[175px] bg-brandG drop-shadow-2xl rounded-bl-full  ">
-          <p onClick={()=> setShowMenu((prev)=> !prev)}  className='absolute right-[20px]  top-[10px] hov '></p>
+          <p onClick={()=> setShowMenu((prev)=> !prev)}  className='absolute text-[52px] right-[20px]  top-[-5px] hov '>≡</p>
           {/* <p onClick={()=> setShowModal(true)} className='absolute right-[130px]  top-[10px] hov '></p> */}
           <p onClick={()=> setST({modalShow: true})} className='absolute right-[130px]  top-[10px] hov '></p>
           <p className='absolute right-[84px]  top-[84px] hov'></p>
@@ -43,21 +48,19 @@ function Home() {
     </HomeLeftFix>
 
     {/* Making top logo and slogan */}
-    <HomeRow className="mb-[-120px]">
-      <HomeContent  className=" icon text-brandG text-[100px]">hoduno</HomeContent> 
-    </HomeRow>
-    <HomeRow className="">
-      <HomeContent  right className=" text-brandG text-[40px] ml-[80px] leading-8 opacity-50">
-        all of this knowledge<p className='text-[120px]'>?</p>
-        </HomeContent> 
-    </HomeRow>
+    <div className="text-brandG md:pl-[35%] pl-[5%]">
+        <h1  className=" icon  text-[100px]">hoduno</h1> 
+        <h2  className=" text-[24px] leading-4 opacity-50 mt-[-80px] ml-40">
+          <span>all of this knowledge</span>
+          <span className='text-[120px]'>?</span>
+        </h2 >
+    </div>
     {/* End of top logo and slogan */}
-
 
 <HomeItem  right  data={modelOfHomepage.content[0]} />  
 <HomeItem  className="bg-brandG mt-[100px"  data={modelOfHomepage.content[1]} />  
 <HomeRow>  {/* Show Platform flow */}
-    <p className=" flex text-brandG icon text-2xl m-16 lg:w-[180px] w-full "> {modelOfHomepage.text[0]}</p>
+    <p className=" flex text-brandG icon text-2xl m-16 lg:w-[160px] w-full "> {modelOfHomepage.text[0]}</p>
     <img className=" flex opacity-50" src="flow.png" alt="hoduno platform"></img>
 </HomeRow>
 <HomeItem  className="bg-[#080505]"   data={modelOfHomepage.content[2]} />  

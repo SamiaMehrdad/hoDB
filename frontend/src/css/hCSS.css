@@ -232,17 +232,16 @@ textarea {
 
 .glassButton:hover{
     cursor: pointer;
-    border-left: 2px solid #0ff;
-    border-right: 2px solid #0ff;
+    border-left: 2px solid #0bb;
+    border-right: 2px solid #0bb;
     color: #0ff;
 }
 .glassButton:active{
 
-border: none;
-    border-left: 2px solid #9c7;
-    border-right: 2px solid #9c7;
-    color: #9c7;
-
+    border: none;
+    border-left: 2px solid #099;
+    border-right: 2px solid #099;
+    color: #0cc;
 }
 
 

@@ -1,4 +1,7 @@
-## Data model names description :
+## hoduno 
+ # Data model names description :
+ A brief description of hoduno DB model namings.
+ <br/>
 *  `Single` :  A single Question or Answer object,  with Value, Caption and Image properties.
 *  `Item` :  A single Qs/As object, with multiple `Single` objects, and some other properties.
 *  `Case` : An under construction `Title`. To be used in <u>**hoduno STUDIO**</u>.

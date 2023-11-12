@@ -1,3 +1,9 @@
+//hoduno component for glass button
+// exported component: GlassButton
+// called by: 
+// 2023 Mehrdad Samia -  All Rights Reserved
+// --------------------------------------------------//
+
 import React from "react";
 
 function GlassButton({ title, className }) {

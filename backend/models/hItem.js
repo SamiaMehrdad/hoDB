@@ -21,7 +21,9 @@ const mongID = mongoose.Schema.Types.ObjectId;
         adverseList: [{ type: Number }],  //----  list of all items which never can be in the same screen with this.
         alliesList: [{ type: Number }],   //----  list of all related items, for multi choice scenarios.
         narration: { type: String },      //----  URL to audio that will be played with this item.  
+        text: { type: String },           //----  text to be displayed with this item. Written version of narration.
         hint: { type: String },           //---- 
+        special: {type: Number, default: 0}, //----  special type of item. 0: normal, 1: bonus, 2: penalty, 
       },
       {
         timestamps: true,

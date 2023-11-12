@@ -2,6 +2,16 @@ const HF = require("../../frontend/src/share/hfixes")
 const User = require('./hUser')
 const Category = require('./hCategory')
 
+const captionSchema = mongoose.Schema(
+    {
+      text: {type: String, required: true, },
+      color: {type: Number, default: 0, },
+      size: {type: Number, default: 10, },
+      font: {type: String, default: 'hoduno', },
+      style: {type: String, default: 'normal', },
+      rotation: {type: Number, default: 0, },
+      shadow: {type: String, default: '2px 2px 3px', },
+    } );
 
 const singleSchema = mongoose.Schema(
     {

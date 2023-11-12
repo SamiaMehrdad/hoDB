@@ -1,13 +1,13 @@
 
 //========================================================
- // This is a model of homepage data store.
+ // This is a model of hoduno homepage data store.
  // TODO: Replace this with a dynamic version comming from backend 
 //========================================================
 const templateHomepage = {
     menu:{
         login: ["Login","Sign in or sign up your account.",""],
         play: ["Play","Play hoduno titles.",""],
-        shop:  ["Shpping","Go to hoduno market place.",""],
+        shop:  ["Shopping","Go to hoduno market place.",""],
         info:  ["More Info","Getting more info about hoduno ecosystem.",""],
         support:  ["Help & Support","FAQ, Get help, Request or Report titles, and more.",""],
         survey:  ["Take Beta Survey","Doing beta testing survey.",""],
@@ -16,7 +16,7 @@ const templateHomepage = {
     content: { 
         0: { title:"Introduction", button:"More Info", img:"image01.png", body:"Get ready for an edutainment experience like no other with hoduno! From the mysteries of the universe to the secret lives of ants, we've got it all. Plus, you can access hoduno on any device, big or small. Join us today and let the learning (and fun) begin!"},
         1: { title:"Limitless", button:"Search Titles", img:"search_titles.jpg", body:"Get your knowledge on with hoduno! We've got a huge selection of titles and categories to choose from, all with easy search functionality. Start playing hoduno today and let the fun begin!"},
-        2: { title:"Really Limitless!", button:"Request Title", img:"wish_titles.jpg", body:"Looking for something specific? No problem ! hoduno has a request mechanism too. Just let hoduno content makers know what you need and you can enjoy it soon."},
+        2: { title:"Really Limitless!", button:"Request Title", img:"wish_titles.jpg", body:"Looking for something specific? No problem! hoduno has a request mechanism too. Just let hoduno content makers know what you need and you can enjoy it soon."},
         3: { title:"Powerful Media", button:"Direct Order", img:"save_legacy.jpg", body:"Preserve your culture's heritage with hoduno. Share stories and traditions from around the world and join our diverse community. Start ordering to spread knowledge today!"},
         4: { title:"Doing Right", button:"Sponsor", img:"spread_knowledge.jpg", body:"There are many talented content makers and creative artists working in hoduno.Your sponsorship will ensure valuable knowledge can be preserved and published in growing hoduno marketplace."},
         5: { title:"Help Your Kids", button:"More For Kids", img:"growing.jpg", body:"Do you like for your kids to learn in a fast, easy and fun way? Who doesn't ?! Just add some hoduno items to their basket. You can find items for any ages, from 2 to 200."},

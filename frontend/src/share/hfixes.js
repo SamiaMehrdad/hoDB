@@ -6,7 +6,7 @@ const HF = {
  Enum:{   
     UserType:       {PERSON:'PERSON', COMPANY:'COMPANY',},
     ShuffleMode:    {POOL:'POOL', FEED:'FEED', CARD:'CARD', },
-    Style:          {PAIR:'PAIR', MULTI:'MULTI', LINEUP:'LINE', AUDIONLY:'AUDIO', },
+    Style:          {PAIR:'PAIR', MULTI:'MULTI', MANY:'MANY', RANGE:'RANGE', AUDIONLY:'AUDIO', },
     Genre:          {STRAIGHT:'STRAIGHT', SOMEHOW:'SOMEHOW', MYSTERY:'MYSTERY', },
     Rating:         {EVERYONE:'EVERYONE', KID:'KID', TEEN:'TEEN', ADULT:'ADULT', EXPERT:'EXPERT' , },
     PromoAct:       {TOBUY:'TOBUY', TOFINISH:'TOFINISH', HIGHSCORE:'HIGHSCORE',},

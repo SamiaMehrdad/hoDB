@@ -1,5 +1,8 @@
-/*
-* IDEA:
+// Desc: hoduno main app component
+// 22023 Mehrdad Samia -  All Rights Reserved
+
+
+/* IDEA:
 * dispact obj defines relation between icons, buttons etc and related menu to show
  const dispatch = {
        clickElemID: MenuToOpenID;
